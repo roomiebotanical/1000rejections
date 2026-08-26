@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>Log an Ask · 1000 Rejections</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+  <a href="index.html" class="logo">
+    1000 REJECTIONS
+  </a>
+
+  <a href="index.html" class="back-link">
+    ← Dashboard
+  </a>
+
+</header>
+
+
+
+<main class="log-page">
+
+
+  <p class="eyebrow">
+    PERSONAL LOG / ENTRY
+  </p>
+
+
+  <h1>
+    What did<br>
+    you ask?
+  </h1>
+
+
+  <p class="intro">
+
+    Record the ask, the outcome and how scary
+    it felt before you did it.
+
+    <br><br>
+
+    This data is stored locally in your browser.
+
+  </p>
+
+
+
+  <!-- FORM -->
+
+  <form id="logForm" class="log-form">
+
+
+    <!-- ASK -->
+
+    <label>
+
+      <span>THE ASK</span>
+
+      <textarea
+        id="ask"
+        required
+        placeholder="Asked a creative director to review my portfolio"
+      ></textarea>
+
+    </label>
+
+
+
+    <!-- CATEGORY + PLATFORM -->
+
+    <div class="form-grid">
+
+
+      <label>
+
+        <span>CATEGORY</span>
+
+        <select id="category">
+
+          <option value="Career">
+            Career
+          </option>
+
+          <option value="Feedback">
+            Feedback
+          </option>
+
+          <option value="Networking">
+            Networking
+          </option>
+
+          <option value="Creative">
+            Creative
+          </option>
+
+          <option value="Money">
+            Money
+          </option>
+
+          <option value="Personal">
+            Personal
+          </option>
+
+          <option value="Other">
+            Other
+          </option>
+
+        </select>
+
+      </label>
+
+
+
+      <label>
+
+        <span>WHERE?</span>
+
+        <input
+          id="platform"
+          type="text"
+          required
+          placeholder="LinkedIn"
+        >
+
+      </label>
+
+
+    </div>
+
+
+
+    <!-- RESULT -->
+
+    <fieldset>
+
+      <legend>RESULT</legend>
+
+
+      <div class="result-options">
+
+
+        <label>
+
+          <input
+            type="radio"
+            name="result"
+            value="YES"
+            required
+          >
+
+          <span>YES</span>
+
+        </label>
+
+
+
+        <label>
+
+          <input
+            type="radio"
+            name="result"
+            value="NO"
+          >
+
+          <span>NO</span>
+
+        </label>
+
+
+
+        <label>
+
+          <input
+            type="radio"
+            name="result"
+            value="GHOSTED"
+          >
+
+          <span>GHOSTED</span>
+
+        </label>
+
+
+      </div>
+
+    </fieldset>
+
+
+
+    <!-- FEAR -->
+
+    <label>
+
+      <span>FEAR BEFORE / 10</span>
+
+
+      <div class="range-row">
+
+        <input
+          id="fear"
+          type="range"
+          min="1"
+          max="10"
+          value="7"
+        >
+
+        <strong id="fearNumber">
+          7
+        </strong>
+
+      </div>
+
+    </label>
+
+
+
+    <!-- DATE -->
+
+    <label>
+
+      <span>DATE</span>
+
+      <input
+        id="date"
+        type="date"
+        required
+      >
+
+    </label>
+
+
+
+    <!-- NOTES -->
+
+    <label>
+
+      <span>
+        NOTES
+        <em>optional</em>
+      </span>
+
+
+      <textarea
+        id="notes"
+        placeholder="What happened? What did you learn?"
+      ></textarea>
+
+    </label>
+
+
+
+    <!-- SAVE -->
+
+    <button
+      class="primary-button"
+      type="submit"
+    >
+      Save this ask →
+    </button>
+
+
+    <p
+      id="successMessage"
+      class="form-message"
+    ></p>
+
+
+  </form>
+
+
+
+  <!-- DATA MANAGEMENT -->
+
+  <section class="data-section">
+
+
+    <p class="eyebrow">
+      YOUR DATA
+    </p>
+
+
+    <h2>
+      Keep your experiment safe.
+    </h2>
+
+
+    <p>
+      Export your entries regularly so you always have
+      a backup. You can import that file again later.
+    </p>
+
+
+    <div class="data-buttons">
+
+      <button
+        id="exportButton"
+        class="secondary-button"
+      >
+        ↓ Export data
+      </button>
+
+
+      <label class="secondary-button import-button">
+
+        ↑ Import data
+
+        <input
+          id="importInput"
+          type="file"
+          accept=".json"
+          hidden
+        >
+
+      </label>
+
+    </div>
+
+
+    <button
+      id="clearButton"
+      class="danger-button"
+    >
+      Delete all data
+    </button>
+
+
+  </section>
+
+
+</main>
+
+
+<script
+  type="module"
+  src="log.js">
+</script>
+
+</body>
+</html>

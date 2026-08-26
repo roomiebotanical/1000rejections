@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Rejection Wall · 1000 Rejections</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <a href="index.html" class="logo">1000 REJECTIONS</a>
+
+  <nav>
+    <a href="index.html#latest">Latest</a>
+    <a href="wall.html">Rejection Wall</a>
+    <a href="index.html#stats">Stats</a>
+  </nav>
+
+  <a href="index.html" class="back-link">← Dashboard</a>
+</header>
+
+
+<main class="wall-page">
+
+  <p class="eyebrow">EVERY ASK / FULL HISTORY</p>
+
+  <h1>
+    The<br>
+    wall.
+  </h1>
+
+  <p class="intro">
+    Every ask, click one to see the full details.
+  </p>
+
+  <a href="log.html" class="primary-button wall-add-button">
+    + Log an ask
+  </a>
+
+  <div id="wallList" class="wall-list"></div>
+
+</main>
+
+
+<!-- DETAIL MODAL -->
+<div id="detailModal" class="modal-overlay" hidden>
+
+  <div class="modal-box">
+
+    <button id="closeModal" class="modal-close" aria-label="Close">×</button>
+
+    <p class="eyebrow" id="modalNumber"></p>
+
+    <h2 id="modalAsk"></h2>
+
+    <div class="modal-meta">
+
+      <span>
+        CATEGORY
+        <strong id="modalCategory"></strong>
+      </span>
+
+      <span>
+        WHERE
+        <strong id="modalPlatform"></strong>
+      </span>
+
+      <span>
+        RESULT
+        <strong id="modalResult"></strong>
+      </span>
+
+      <span>
+        FEAR
+        <strong id="modalFear"></strong>
+      </span>
+
+      <span>
+        DATE
+        <strong id="modalDate"></strong>
+      </span>
+
+    </div>
+
+    <div id="modalNotesWrap" class="modal-notes">
+      <p class="eyebrow">NOTES</p>
+      <p id="modalNotes"></p>
+    </div>
+
+  </div>
+
+</div>
+
+
+<script type="module" src="wall.js"></script>
+
+</body>
+</html>
