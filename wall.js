@@ -86,9 +86,9 @@ async function loadAsks() {
       .from("asks")
       .select("*")
       .order(
-        "date",
+        "id",
         {
-          ascending: false
+          ascending: true
         }
       );
 

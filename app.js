@@ -244,7 +244,7 @@ function renderDashboard(
 
 
   const latest =
-    asks.slice(0, 8);
+    asks.slice(0, 5);
 
 
   if (latest.length === 0) {
