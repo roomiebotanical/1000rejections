@@ -88,7 +88,7 @@ async function loadAsks() {
       .order(
         "id",
         {
-          ascending: true
+          ascending: false
         }
       );
 
