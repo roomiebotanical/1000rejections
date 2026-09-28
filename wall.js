@@ -33,6 +33,29 @@ const closeModalButton =
 
 
 /* ==================================================
+   RESULT LABELS
+   (display text only — the stored value in
+   Supabase stays "GHOSTED")
+================================================== */
+
+function formatResultLabel(
+  result
+) {
+
+  if (result === "GHOSTED") {
+
+    return "NO RESPONSE (YET)";
+
+  }
+
+
+  return result;
+
+}
+
+
+
+/* ==================================================
    HTML SAFETY
 ================================================== */
 
@@ -176,7 +199,7 @@ function renderList(
             class="result ${ask.result.toLowerCase()}"
           >
 
-            ${ask.result}
+            ${formatResultLabel(ask.result)}
 
           </div>
 
@@ -224,7 +247,7 @@ function openModal(
   document.getElementById(
     "modalResult"
   ).textContent =
-    ask.result;
+    formatResultLabel(ask.result);
 
 
   document.getElementById(
